@@ -1,0 +1,29 @@
+name: 安裝或更新協助
+description: 回報下載、版本相容、安裝或回復問題
+title: "[Install] "
+body:
+  - type: input
+    id: version
+    attributes:
+      label: 安裝包版本、原版本與 Revit 年度
+    validations:
+      required: true
+  - type: dropdown
+    id: stage
+    attributes:
+      label: 發生階段
+      options:
+        - 版本檢查
+        - 下載或驗證
+        - 安裝
+        - 開啟 Revit 或圖台
+        - 回復前版
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: 操作步驟與去識別錯誤摘要
+      description: 不需要提供密碼、token、RVT 或原始診斷包。請移除使用者名稱與完整路徑。
+    validations:
+      required: true

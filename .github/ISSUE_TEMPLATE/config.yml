@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 安全漏洞私人回報
+    url: https://github.com/NightFox-Inari/ACT-Releases/security/advisories
+    about: 請使用 Report a vulnerability；若入口不可用，依 SECURITY.md 請求私人聯繫，勿公開細節。
+  - name: 版本與下載
+    url: https://github.com/NightFox-Inari/ACT-Releases/releases
+    about: 只使用已發布且標示相容年度的安裝包。

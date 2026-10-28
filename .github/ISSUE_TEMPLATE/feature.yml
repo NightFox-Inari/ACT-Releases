@@ -1,0 +1,16 @@
+name: 功能或使用方式建議
+description: 描述希望解決的工作問題與預期互動
+title: "[Idea] "
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: 工作目標與目前困難
+      description: 請用去識別的例子；可描述條件、幾何關係、計算與介面，無須提供公司模型。
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 希望如何操作與驗收
+      description: 優先描述可重用的能力，不限於單一專用工具。
