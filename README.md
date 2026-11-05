@@ -4,7 +4,11 @@ ACT 的公開發布、使用說明與問題回報入口。執行核心為 ARC（
 
 ## 目前發布狀態
 
-已提供 **Revit 2024 / Windows x64 編譯試用版 Preview**，不是穩定版。首次試用請用測試模型；本次套件不適用 Revit 2023。
+已分別提供 **Revit 2023 與 Revit 2024 / Windows x64 編譯 Preview**，均非穩定版。請依 Revit 年度選擇，不能跨年替換 DLL，首次試用請用可丟棄測試模型。
+
+### [下載 ACT 2023 Preview 0.1.0-preview.20261105](https://github.com/NightFox-Inari/ACT-Releases/releases/tag/v0.1.0-preview.20261105)
+
+下載 `ACT-Revit-2023-Compiled-Preview-20261105.zip` 與同名 `.sha256`，解壓縮後依序執行 `Verify-ACT-2023.cmd`、`Install-ACT-2023.cmd`。已對真正 2023 API 編譯（0 錯誤、0 警告），83 項離線回歸通過；**2023 主程式載入、內嵌圖台與模型操作尚未驗收**。保留 `scriptPreviewReady=false`，先做安裝／載入／唯讀驗收，不直接投入正式模型批量作業。一般安裝不需 SDK、Visual Studio 或另裝 Node，完整步驟見 Release 的 `README_INSTALL.zh-TW.txt`。
 
 ### [下載 ACT 2024 Preview 0.1.0-preview.20261104](https://github.com/NightFox-Inari/ACT-Releases/releases/tag/v0.1.0-preview.20261104)
 
@@ -23,7 +27,7 @@ ACT 的公開發布、使用說明與問題回報入口。執行核心為 ARC（
 
 ## 更新操作
 
-本版以手動下載、核對及安裝為主。**ACT 內的更新按鈕及簽章自動更新仍在開發，尚未啟用。** 本 Preview DLL 未做發行者數位簽章，SHA256 只證明完整性；收件人須核對官方發布來源並自行決定是否載入。關閉相關 Revit 後才替換 ARC DLL；圖台先保存草稿再重啟。更新不修改模型、不帶入 AI 權限、不重置個人經驗或設計方案。
+公開版以手動下載、核對及安裝為主。2024 公開包維持原版；2023 Preview 帶版本查詢／官方發布頁入口，**自動下載、簽章驗證與自動安裝尚未啟用**。後續 2024 介面候選尚未公開。 本 Preview DLL 未做發行者數位簽章，SHA256 只證明完整性；收件人須核對官方發布來源並自行決定是否載入。關閉相關 Revit 後才替換 ARC DLL；圖台先保存草稿再重啟。更新不修改模型、不帶入 AI 權限、不重置個人經驗或設計方案。
 
 ## 回報前
 
