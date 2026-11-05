@@ -1,8 +1,16 @@
 # ACT 發布狀態
 
-更新：2026-11-04。
+更新：2026-11-05。
 
-## 當前狀態
+## 新增：Revit 2023 編譯 Preview
+
+[0.1.0-preview.20261105 下載與限制](https://github.com/NightFox-Inari/ACT-Releases/releases/tag/v0.1.0-preview.20261105)：提供 2023-only / Windows x64 收件安裝包、核對／備份／還原入口及第三方聲明。真正 2023 API 編譯為 0 錯誤／0 警告，83 項離線回歸；公開安裝器於 PowerShell 5.1／7 各 12 個隔離案例通過。2023 主程式載入、內嵌與模型尚未驗，不繼承 2024 驗收；`scriptPreviewReady=false` 保守保留。
+
+公開 DLL 僅清理私人 CodeView 建置路徑，IL／資源保持，公開 hash 與原編譯 hash 分列包內。未簽章，checksum 非發行者簽章；正式記憶寫入與自動下載／安裝停用。沒有把 Autodesk API 或 SDK 隨包分發。收件人先以測試模型做安裝／載入／唯讀驗收。
+
+**2024 的新介面整合候選尚未發布或同步至原始碼庫**；原 0.1.0-preview.20261104 發布資產保持原樣。
+
+## 既有 Revit 2024 公開 Preview（2026-11-04）
 
 本次先提供 **Revit 2024 / Windows x64 手動安裝 Preview**，版本 `0.1.0-preview.20261104`；[下載與限制](RELEASE_20261104.zh-TW.md)。不是 stable。2023 本輪實機已由維護者暫緩，不作本包支援聲明，也不再阻擋 2024-only Preview。
 
