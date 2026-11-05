@@ -10,9 +10,9 @@ ACT 的公開發布、使用說明與問題回報入口。執行核心為 ARC（
 
 下載 `ACT-Revit-2023-Compiled-Preview-20261105.zip` 與同名 `.sha256`，解壓縮後依序執行 `Verify-ACT-2023.cmd`、`Install-ACT-2023.cmd`。已對真正 2023 API 編譯（0 錯誤、0 警告），83 項離線回歸通過；**2023 主程式載入、內嵌圖台與模型操作尚未驗收**。保留 `scriptPreviewReady=false`，先做安裝／載入／唯讀驗收，不直接投入正式模型批量作業。一般安裝不需 SDK、Visual Studio 或另裝 Node，完整步驟見 Release 的 `README_INSTALL.zh-TW.txt`。
 
-### [下載 ACT 2024 Preview 0.1.0-preview.20261104](https://github.com/NightFox-Inari/ACT-Releases/releases/tag/v0.1.0-preview.20261104)
+### [下載 ACT 2024 更新 Preview 0.1.0-preview.20261105.2](https://github.com/NightFox-Inari/ACT-Releases/releases/tag/v0.1.0-preview.20261105.2)
 
-下載 Release 中的 `ACT-Revit-2024-Compiled-Preview-20261104.zip` 及 `.sha256`，解壓縮後先執行 `Verify-ACT-2024.cmd`，再執行 `Install-ACT-2024.cmd`。**GitHub 的 Source code ZIP 不是安裝包。** 保存模型與圖台草稿，正常關閉所有 Revit 後安裝；不需 Visual Studio、.NET SDK 或另裝 Node。
+下載 Release 中的 `ACT-Revit-2024-Compiled-Preview-20261105-Updater.zip` 及 `.sha256`，解壓縮後先執行 `Verify-ACT-2024.cmd`，再執行 `Install-ACT-2024.cmd`。**GitHub 的 Source code ZIP 不是安裝包。** 保存模型與圖台草稿，正常關閉所有 Revit 後安裝；不需 Visual Studio、.NET SDK 或另裝 Node。
 
 內嵌圖台需要 Microsoft Edge WebView2 Evergreen Runtime；本包未附其安裝器。既有 ACT 服務佔用 8993 時會安全停止安裝，不會結束其他 Node 程序。完整步驟與還原方式見包內 `README_INSTALL.zh-TW.txt`。
 
@@ -27,7 +27,13 @@ ACT 的公開發布、使用說明與問題回報入口。執行核心為 ARC（
 
 ## 更新操作
 
-公開版以手動下載、核對及安裝為主。2024 公開包維持原版；2023 Preview 帶版本查詢／官方發布頁入口，**自動下載、簽章驗證與自動安裝尚未啟用**。後續 2024 介面候選尚未公開。 本 Preview DLL 未做發行者數位簽章，SHA256 只證明完整性；收件人須核對官方發布來源並自行決定是否載入。關閉相關 Revit 後才替換 ARC DLL；圖台先保存草稿再重啟。更新不修改模型、不帶入 AI 權限、不重置個人經驗或設計方案。
+2024 新增專用 RSA-3072 / SHA256 簽章更新 Preview：固定官方頻道核對版本、年度、有效期限與序號，再下載、驗證完整包。由人確認已保存模型及圖台，正常關閉所有 Revit 後才由獨立助手備份、安裝；不強制關閉 Revit，也不是無人值守更新。
+
+**舊版只查版本的入口需要先人工安裝一次新版。** 首次安裝用 Release 完整 ZIP；內部 A→B 測試的首次入口另由維護者準備。2023 既有專用 Preview 保持原版，未因此取得新的簽章下載安裝能力。舊 [2024 Preview 11/04](https://github.com/NightFox-Inari/ACT-Releases/releases/tag/v0.1.0-preview.20261104) 也保留原樣。
+
+本次已完成兩版各 70 項隔離更新檢查、22 項舊入口相容檢查，以及精確公開包的離線簽章和完整 A→B 安裝模擬；正式附件也已匿名下載核對。**Revit 內完整更新與乾淨電腦仍待實機驗收。** 這些測試不代表所有使用情況已通過。
+
+固定 [Preview 簽章頻道](updates/preview-rsa-v1.json) 已發布；過期、離線、校驗不符或未知本機版本會阻擋下載安裝。Stable 簽章頻道尚未發布。套件專用簽章與 Windows Authenticode／Revit 發行者簽章不同，收件人仍須核對官方來源及人類安全提示。更新不修改模型、不帶入 AI 權限、不重置個人經驗或設計方案。
 
 ## 回報前
 
