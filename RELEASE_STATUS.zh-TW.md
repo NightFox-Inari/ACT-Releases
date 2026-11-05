@@ -2,13 +2,19 @@
 
 更新：2026-11-05。
 
+## 最新：2024 簽章更新 Preview .2
+
+[0.1.0-preview.20261105.2](https://github.com/NightFox-Inari/ACT-Releases/releases/tag/v0.1.0-preview.20261105.2) 已發布不可變 Preview，4 個附件匿名下載與 SHA256 一致。新 ARC 與更新助手實際編譯兩版；A/B 各 70 項隔離更新檢查、22 項舊入口 WPF 相容檢查、連線 fixtures、實際簽章及完整資料包 A→B 模擬通過。固定 Preview 簽章頻道已發布；原2023/2024資產未改。
+
+尚未完成：Revit 內真正下載／關閉／服務鎖／安裝／重開與未存工作驗收、乾淨電腦、2023 新更新鏈。不要把隔離或公開下載測試當完整實機成功。舊 metadata-only 入口需先人工安裝一次可信的新入口。此為 ACT 套件 RSA 簽章，非 Windows Authenticode；人類安全提示仍需本人決定。正式專案記憶、背景雲端同步及通用 BIM 寫入未因此啟用。
+
 ## 新增：Revit 2023 編譯 Preview
 
 [0.1.0-preview.20261105 下載與限制](https://github.com/NightFox-Inari/ACT-Releases/releases/tag/v0.1.0-preview.20261105)：提供 2023-only / Windows x64 收件安裝包、核對／備份／還原入口及第三方聲明。真正 2023 API 編譯為 0 錯誤／0 警告，83 項離線回歸；公開安裝器於 PowerShell 5.1／7 各 12 個隔離案例通過。2023 主程式載入、內嵌與模型尚未驗，不繼承 2024 驗收；`scriptPreviewReady=false` 保守保留。
 
 公開 DLL 僅清理私人 CodeView 建置路徑，IL／資源保持，公開 hash 與原編譯 hash 分列包內。未簽章，checksum 非發行者簽章；正式記憶寫入與自動下載／安裝停用。沒有把 Autodesk API 或 SDK 隨包分發。收件人先以測試模型做安裝／載入／唯讀驗收。
 
-**2024 的新介面整合候選尚未發布或同步至原始碼庫**；原 0.1.0-preview.20261104 發布資產保持原樣。
+2024 新介面與簽章更新 Preview 已另行發布；私人原始碼未同步。原 0.1.0-preview.20261104 發布資產保持原樣。
 
 ## 既有 Revit 2024 公開 Preview（2026-11-04）
 
