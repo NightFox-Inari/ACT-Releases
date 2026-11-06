@@ -1,8 +1,29 @@
 # ACT 發布狀態
 
-更新：2026-11-05。
+更新：2026-11-06。
 
-## 最新：2024 更新恢復 Preview .3
+## 最新：2023 簽章更新 Preview .20261106.1
+
+[0.1.0-preview.20261106.1](https://github.com/NightFox-Inari/ACT-Releases/releases/tag/v0.1.0-preview.20261106.1) 為新的 Revit 2023 / Windows x64 編譯 Preview。完整包 **ACT-Revit-2023-Compiled-Preview-20261106-Updater.zip**，請一併下載同名 SHA256。Source code ZIP 不是安裝包。
+
+只移植簽章更新按鈕及必要年度防護，保留原 2023 面板與模型限制。**舊 2023 入口只有版本提示，須先手動安裝一次新包；首次手動安裝不是舊按鈕升級驗收。** 保存全部模型／草稿、正常關閉全部 Revit，再依包內說明核對與安裝。
+
+### 本輪已核對
+
+- 真正 API 23 主程式與助手編譯 0 錯誤／0 警告；精確助手 pin、原 RSA 公鑰、API 年度及內嵌版本一致。
+- 02 的 28＋原 15 項離線檢查、PS5.1 連線 fixture 11 項及指南審查；root 重跑同一 28＋15，03 另對實際新編譯檔獨立執行 23 項純方法檢查。不同輪次不重複計為新增功能。
+- 精確公開包 213 檔、212 逐檔校驗列；原 2023 安裝器、40 個第三方條款、Node 與主圖台維持來源位元組。未分發 Autodesk API、私鑰、PDB、研發資料或私人來源。
+- 2023 與既有 2024 .3 的實際編譯 consumer 均接受正式序號 3 RSA 簽章；原 2024 offer 全七欄不變。共用清單先篩年度，不能因 2023 日期較新而換進 2024。
+- 凍結 consumer 對新公開包做安全解包、完整核對及合成副本試裝，舊 2023 程式樹備份一致。測試使用隔離目錄及明示的空白程序閘門，不是正式 Run、原按鈕更新或使用者資料還原。
+- GitHub 不可變 Preview 四附件匿名下載與雜湊回讀已核對；共用 Preview 頻道新增 2023 並保留 2024 .3，舊發布資產不修改。
+
+### 仍待實機
+
+hostValidated=false、scriptPreviewReady=false。未在 Revit 2023 主程式驗載入、內嵌、真按鈕安裝／重試、服務／資料、模型操作或乾淨電腦。不能外推 2024 的限定成功，不直接投入正式模型批量作業。**完整 M1 未結案，Stable 尚未發布。**
+
+新包更新視窗可核對簽章並下載準備，由人確認保存，助手等全部 Revit 正常關閉後才備份安裝；不是無人值守。套件簽章不是 Windows Authenticode。正式記憶寫入、背景同步及通用 BIM 寫入未因此啟用。
+
+## 既有：2024 更新恢復 Preview .3
 
 [0.1.0-preview.20261105.3](https://github.com/NightFox-Inari/ACT-Releases/releases/tag/v0.1.0-preview.20261105.3) 已發布不可變 Preview。完整收件包為 `ACT-Revit-2024-Compiled-Preview-20261105-M1.zip`，請一併下載同名 SHA256 檔；不是 GitHub 的 Source code ZIP。
 
@@ -22,11 +43,11 @@
 
 舊 metadata-only 入口仍需先人工安裝可信新入口。ACT 套件 RSA 簽章並非 Windows Authenticode；首次安全提示仍由人確認。Stable 頻道、正式專案記憶寫入、背景雲端同步及通用 BIM 寫入未因此啟用。Key 與其他路線不納入本次更新能力宣告。
 
-## 新增：Revit 2023 編譯 Preview
+## 歷史：Revit 2023 首次編譯 Preview（11/05）
 
 [0.1.0-preview.20261105 下載與限制](https://github.com/NightFox-Inari/ACT-Releases/releases/tag/v0.1.0-preview.20261105)：提供 2023-only / Windows x64 收件安裝包、核對／備份／還原入口及第三方聲明。真正 2023 API 編譯為 0 錯誤／0 警告，83 項離線回歸；公開安裝器於 PowerShell 5.1／7 各 12 個隔離案例通過。2023 主程式載入、內嵌與模型尚未驗，不繼承 2024 驗收；`scriptPreviewReady=false` 保守保留。
 
-公開 DLL 僅清理私人 CodeView 建置路徑，IL／資源保持，公開 hash 與原編譯 hash 分列包內。未簽章，checksum 非發行者簽章；正式記憶寫入與自動下載／安裝停用。沒有把 Autodesk API 或 SDK 隨包分發。收件人先以測試模型做安裝／載入／唯讀驗收。
+公開 DLL 僅清理私人 CodeView 建置路徑，IL／資源保持，公開 hash 與原編譯 hash 分列包內。該 11/05 舊包未具發布簽章，checksum 非發行者簽章；當時正式記憶寫入與自動下載／安裝停用。11/06 簽章更新包另列於上方，未覆寫此舊包。沒有把 Autodesk API 或 SDK 隨包分發。收件人先以測試模型做安裝／載入／唯讀驗收。
 
 2024 新介面與簽章更新 Preview 已另行發布；私人原始碼未同步。原 0.1.0-preview.20261104 發布資產保持原樣。
 
